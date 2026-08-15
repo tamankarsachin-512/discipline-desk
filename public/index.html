@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Discipline Desk — Daily Habit Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="ticker-wrap" id="tickerWrap">
+    <div class="ticker" id="ticker"></div>
+  </div>
+
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-mark">◆</span>
+      <div>
+        <h1>Discipline Desk</h1>
+        <p class="brand-sub">Daily habit blotter</p>
+      </div>
+    </div>
+    <div class="date-nav">
+      <button id="prevDay" class="nav-btn" aria-label="Previous day">&larr;</button>
+      <div class="current-date">
+        <span id="dateLabel">—</span>
+        <span id="dateWeekday" class="weekday-tag">—</span>
+      </div>
+      <button id="nextDay" class="nav-btn" aria-label="Next day">&rarr;</button>
+      <button id="todayBtn" class="today-btn">Today</button>
+    </div>
+  </header>
+
+  <main class="layout">
+
+    <section class="panel checklist-panel">
+      <div class="panel-head">
+        <h2>Today's Entries</h2>
+        <span class="panel-hint">Tap to mark done</span>
+      </div>
+      <ul id="habitList" class="habit-list"></ul>
+
+      <form id="addHabitForm" class="add-habit-form">
+        <input type="text" id="newHabitEmoji" placeholder="🏃" maxlength="4" class="emoji-input" />
+        <input type="text" id="newHabitName" placeholder="Add a new habit…" class="name-input" required />
+        <select id="newHabitFreq" class="freq-select">
+          <option value="daily">Daily</option>
+          <option value="weekend">Weekend</option>
+        </select>
+        <button type="submit" class="add-btn">+ Add</button>
+      </form>
+
+      <div class="note-block">
+        <label for="dayNote">Notes for the day</label>
+        <textarea id="dayNote" placeholder="Anything worth remembering about today…"></textarea>
+      </div>
+
+      <button id="saveBtn" class="save-btn">Save Entry</button>
+      <span id="saveStatus" class="save-status"></span>
+    </section>
+
+    <section class="panel calendar-panel">
+      <div class="panel-head">
+        <h2>Consistency Chart</h2>
+        <div class="month-nav">
+          <button id="prevMonth" class="nav-btn small">&larr;</button>
+          <span id="monthLabel">—</span>
+          <button id="nextMonth" class="nav-btn small">&rarr;</button>
+        </div>
+      </div>
+      <div class="weekday-row">
+        <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+      </div>
+      <div id="calendarGrid" class="calendar-grid"></div>
+      <div class="legend">
+        <span class="legend-item"><i class="swatch swatch-0"></i>0%</span>
+        <span class="legend-item"><i class="swatch swatch-1"></i>~33%</span>
+        <span class="legend-item"><i class="swatch swatch-2"></i>~66%</span>
+        <span class="legend-item"><i class="swatch swatch-3"></i>100%</span>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

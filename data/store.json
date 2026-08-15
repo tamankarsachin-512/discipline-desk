@@ -1,0 +1,62 @@
+{
+  "habits": [
+    {
+      "id": "wake",
+      "name": "Up by 6:00 AM",
+      "emoji": "🌅",
+      "frequency": "daily"
+    },
+    {
+      "id": "calisthenics",
+      "name": "Calisthenics",
+      "emoji": "💪",
+      "frequency": "daily"
+    },
+    {
+      "id": "meditation",
+      "name": "Meditation",
+      "emoji": "🧘",
+      "frequency": "daily"
+    },
+    {
+      "id": "yoga",
+      "name": "Yoga",
+      "emoji": "🤸",
+      "frequency": "daily"
+    },
+    {
+      "id": "reading",
+      "name": "Reading",
+      "emoji": "📖",
+      "frequency": "daily"
+    },
+    {
+      "id": "sleep",
+      "name": "Asleep by 11:00 PM",
+      "emoji": "🌙",
+      "frequency": "daily"
+    },
+    {
+      "id": "live_session",
+      "name": "Weekend Live Session",
+      "emoji": "🎥",
+      "frequency": "weekend"
+    },
+    {
+      "id": "run",
+      "name": "Weekend Run",
+      "emoji": "🏃",
+      "frequency": "weekend"
+    }
+  ],
+  "logs": {
+    "2026-08-15": {
+      "entries": {
+        "wake": true,
+        "calisthenics": true,
+        "meditation": true
+      },
+      "note": "good day"
+    }
+  }
+}
